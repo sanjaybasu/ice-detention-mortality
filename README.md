@@ -6,16 +6,6 @@ This package contains comprehensive analysis of all 250 in-custody deaths in U.S
 
 ---
 
-## What's New in This Version
-
-✓ **All 250 deaths cataloged (FY2004-2025)** from official ICE sources
-✓ **Cause of death for every death** (verbatim from ICE PDFs; preliminary vs. final noted in source docs)
-✓ **Facility name and type** for all deaths; age and facility location fully populated for all 250 deaths (FY2003-2017 and FY2018-2025)
-✓ **Source PDFs** downloaded to `death_report_pdfs/` for offline verification
-✓ **Medical review summary** - Comprehensive clinical analysis (with noted data gaps)
-
----
-
 ## Quick Start
 
 ### For Medical Reviewers
@@ -30,12 +20,6 @@ This package contains comprehensive analysis of all 250 in-custody deaths in U.S
 - All 250 deaths with complete details
 - Includes PDF URLs for source verification
 
-### For Researchers
-
-**Manuscript:** `manuscript/MANUSCRIPT.md` (3,988 words)
-**Appendix:** `manuscript/APPENDIX.md` (comprehensive methods)
-**Figures:** `manuscript/Figure1.png` and `Figure2.png`
-
 **Replication code:** `replication_code/` directory
 - Complete Python scripts to reproduce all analyses
 
@@ -49,18 +33,9 @@ This package contains comprehensive analysis of all 250 in-custody deaths in U.S
 
 ## Package Contents
 
-### 1. Manuscript & Appendix (`manuscript/`)
+### 1. Complete Data Files (`data/`)
 
-- **MANUSCRIPT.md** - Complete 3,988-word manuscript
-- **APPENDIX.md** - Comprehensive appendix with STROBE checklist
-- **Figure1.png** - Mortality rates by administration (300 DPI)
-- **Figure2.png** - Mortality rates by fiscal year (300 DPI)
-
-### 2. Complete Data Files (`data/`)
-
-**NEW: All 250 Deaths with Complete Details**
-
-- **all_250_deaths_detailed.csv** - **PRIMARY DATA FILE**
+- all_250_deaths_detailed.csv** - **PRIMARY DATA FILE**
   - All 250 deaths (FY2004-2025)
   - Columns: Name, Sex, Age, Country, Date of Death, **Cause of Death**, Facility Name, Facility Location, Facility Type, PDF URL, Period
   - **Every death includes cause of death information**
@@ -73,14 +48,14 @@ This package contains comprehensive analysis of all 250 in-custody deaths in U.S
 - **average_daily_population.csv** - ADP data by fiscal year
 - **mortality_rates_by_administration.csv** - Calculated mortality rates
 
-### 3. Replication Code (`replication_code/`)
+### 2. Replication Code (`replication_code/`)
 
 Complete Python scripts to reproduce all analyses:
 - **01_data_extraction.py** - Verifies data extraction
 - **02_calculate_mortality_rates.py** - Calculates mortality rates
 - **03_generate_figures.py** - Generates figures
 
-### 4. Medical Review (`medical_review/`)
+### 3. Medical Review (`medical_review/`)
 
 - **COMPLETE_MEDICAL_REVIEW.md** - Comprehensive medical analysis of all 250 deaths
   - Cause of death analysis
@@ -88,7 +63,7 @@ Complete Python scripts to reproduce all analyses:
   - Temporal trends
   - Recommendations for review
 
-### 5. Source Documents (`source_documents/`)
+### 4. Source Documents (`source_documents/`)
 
 - **SOURCE_DOCUMENTS_GUIDE.md** - Complete guide to accessing all source PDFs
   - Download links for ICE 2003-2017 PDF
