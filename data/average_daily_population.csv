@@ -1,26 +1,27 @@
 fiscal_year,adp,administration,source
-2001,20441,GWB,Migration Policy Institute
-2002,20282,GWB,Migration Policy Institute
-2003,21133,GWB,Migration Policy Institute
-2004,21919,GWB,Migration Policy Institute
-2005,19619,GWB,Migration Policy Institute
-2006,21450,GWB,Migration Policy Institute
-2007,30295,GWB,ICE Removals Report
-2008,31771,GWB,ICE Removals Report
-2009,32098,Obama,ICE Removals Report
-2010,32606,Obama,ICE FOIA
-2011,33330,Obama,ICE FOIA
-2012,34260,Obama,ICE FOIA
-2013,34023,Obama,ICE FOIA
-2014,34376,Obama,ICE FOIA
-2015,33007,Obama,ICE FOIA
-2016,34376,Obama,ICE FOIA
-2017,38106,Trump 1,ICE FOIA
-2018,42188,Trump 1,ICE FOIA
-2019,50165,Trump 1,ICE FOIA
-2020,27768,Trump 1,ICE FOIA
-2021,20152,Biden,ICE FOIA
-2022,22678,Biden,ICE FOIA
-2023,30733,Biden,ICE FOIA
-2024,37790,Biden,ICE FOIA
-2025,51130,Trump 2,TRAC daily series CY2025 average (calendar year 2025)
+2001,20441.0,GWB,Migration Policy Institute
+2002,20282.0,GWB,Migration Policy Institute
+2003,21133.0,GWB,Migration Policy Institute
+2004,21919.0,GWB,Migration Policy Institute
+2005,19619.0,GWB,Migration Policy Institute
+2006,21450.0,GWB,Migration Policy Institute
+2007,30295.0,GWB,ICE Removals Report
+2008,31771.0,GWB,ICE Removals Report
+2009,32098.0,Obama,ICE Removals Report
+2010,32606.0,Obama,ICE FOIA
+2011,33330.0,Obama,ICE FOIA
+2012,34260.0,Obama,ICE FOIA
+2013,34023.0,Obama,ICE FOIA
+2014,34376.0,Obama,ICE FOIA
+2015,33007.0,Obama,ICE FOIA
+2016,34376.0,Obama,ICE FOIA
+2017,38106.0,Trump 1,ICE FOIA
+2018,42188.0,Trump 1,ICE FOIA
+2019,50165.0,Trump 1,ICE FOIA
+2020,27768.0,Trump 1,ICE FOIA
+2021,20152.0,Biden,ICE FOIA
+2022,22678.0,Biden,ICE FOIA
+2023,30733.0,Biden,ICE FOIA
+2024,37790.0,Biden,ICE FOIA
+2025,48404.482,Trump 2,ICE monthly detention statistics FY2025 (mean)
+2026,66568.905,Trump 2,ICE monthly detention statistics FY2026 (Oct 2025–Jan 2026 mean)
