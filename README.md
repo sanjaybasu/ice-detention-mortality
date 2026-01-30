@@ -1,21 +1,10 @@
 # ICE Detention Mortality Analysis
 
-This package contains comprehensive analysis of 272 in-custody deaths in U.S. Immigration and Customs Enforcement (ICE) detention from fiscal year 2004 through January 19, 2026, with complete cause of death information for every death.
+This package contains analysis of 272 in-custody deaths in U.S. Immigration and Customs Enforcement (ICE) detention from fiscal year 2004 through January 19, 2026, with cause of death information.
 
- All 272 deaths cataloged (FY2004–Jan 2026) from official ICE sources and public reporting updates
- 
- Cause of death for every death (verbatim from ICE PDFs; preliminary vs. final noted in source docs)
- 
- Facility name and type for all deaths; age and facility location fully populated for all 272 deaths (FY2003–2017 and FY2018–2025, with public reporting updates for CY2025 and January 2026)
- 
- Source PDFs downloaded to `death_report_pdfs/` for offline verification
- 
- Medical review summary - Comprehensive clinical analysis (with noted data gaps)
- 
 
 ---
 
-## Quick Start
 
 ### For Medical Reviewers
 
@@ -46,13 +35,12 @@ Source documents guide: `source_documents/SOURCE_DOCUMENTS_GUIDE.md`
 
 Data Files (`data/`)
 
-NEW: All 272 Deaths with Complete Details
+272 Deaths 
 
 - all_272_deaths_detailed.csv - PRIMARY DATA FILE
-  - All 272 deaths (FY2004–Jan 2026)
   - Columns: Name, Sex, Age, Country, Date of Death, Cause of Death, Facility Name, Facility Location, Facility Type, PDF URL, Period
-  - Every death includes cause of death information
-  - Every death includes source PDF URL for verification
+  - Cause of death information
+  - Source PDF URL for verification
 
 Supporting Data Files:
 
@@ -63,14 +51,14 @@ Supporting Data Files:
 
 Replication Code (`replication_code/`)
 
-Complete Python scripts to reproduce all analyses:
+Python scripts to reproduce analyses:
 - 01_data_extraction.py - Verifies data extraction
 - 02_calculate_mortality_rates.py - Calculates mortality rates
 - 03_generate_figures.py - Generates figures
 
 Medical Review (`medical_review/`)
 
-- COMPLETE_MEDICAL_REVIEW.md - Comprehensive medical analysis through FY2025 (public reporting updates for January 2026 not yet incorporated)
+- COMPLETE_MEDICAL_REVIEW.md - medical analysis through FY2025 (public reporting updates for January 2026 not yet incorporated)
   - Cause of death analysis
   - Facility-specific patterns
   - Temporal trends
@@ -78,9 +66,9 @@ Medical Review (`medical_review/`)
 
 Source Documents (`source_documents/`)
 
-- SOURCE_DOCUMENTS_GUIDE.md - Complete guide to accessing all source PDFs
+- SOURCE_DOCUMENTS_GUIDE.md - guide to accessing source PDFs
   - Download links for ICE 2003-2017 PDF
-  - URLs for all 77 individual FY2018–FY2025 death reports (plus public reporting updates for CY2025 and January 2026)
+  - URLs for 77 individual FY2018–FY2025 death reports (plus public reporting updates for CY2025 and January 2026)
   - ADP data sources
 
 
