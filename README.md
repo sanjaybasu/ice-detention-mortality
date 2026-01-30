@@ -1,11 +1,17 @@
 # ICE Detention Mortality Analysis
 
 This package contains comprehensive analysis of 272 in-custody deaths in U.S. Immigration and Customs Enforcement (ICE) detention from fiscal year 2004 through January 19, 2026, with complete cause of death information for every death.
+
  All 272 deaths cataloged (FY2004–Jan 2026) from official ICE sources and public reporting updates
+ 
  Cause of death for every death (verbatim from ICE PDFs; preliminary vs. final noted in source docs)
+ 
  Facility name and type for all deaths; age and facility location fully populated for all 272 deaths (FY2003–2017 and FY2018–2025, with public reporting updates for CY2025 and January 2026)
+ 
  Source PDFs downloaded to `death_report_pdfs/` for offline verification
+ 
  Medical review summary - Comprehensive clinical analysis (with noted data gaps)
+ 
 
 ---
 
