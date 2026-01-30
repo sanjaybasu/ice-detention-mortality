@@ -13,24 +13,15 @@ def calculate_poisson_ci(deaths, person_years, confidence=0.95):
     upper = stats.chi2.ppf(1 - alpha/2, 2*(deaths+1)) / (2 * person_years) * 100000
     return lower, upper
 
-# Define correct fiscal year ranges for each administration
-admin_fy_ranges = {
-    "Bush": (2004, 2008),
-    "Obama": (2009, 2016),
-    "Trump 1": (2017, 2020),
-    "Biden": (2021, 2024),
-    "Trump 2": (2025, 2025)
-}
-
 # Validate that the 'administration' field is assigned by actual date of death
-from datetime import datetime
+from datetime import datetime, timedelta
 
 cutpoints = [
-    ("Bush", datetime(2001, 1, 20), datetime(2009, 1, 19)),
+    ("Bush", datetime(2001, 10, 1), datetime(2009, 1, 19)),
     ("Obama", datetime(2009, 1, 20), datetime(2017, 1, 19)),
     ("Trump 1", datetime(2017, 1, 20), datetime(2021, 1, 19)),
     ("Biden", datetime(2021, 1, 20), datetime(2025, 1, 19)),
-    ("Trump 2", datetime(2025, 1, 20), datetime(2026, 1, 29)),
+    ("Trump 2", datetime(2025, 1, 20), datetime(2026, 1, 19)),
 ]
 
 def admin_by_date(d):
@@ -40,7 +31,7 @@ def admin_by_date(d):
     return None
 
 deaths_df['date_of_death'] = pd.to_datetime(deaths_df['date_of_death'])
-analysis_end = datetime(2026, 1, 29)
+analysis_end = cutpoints[-1][-1]
 analysis_df = deaths_df[deaths_df['date_of_death'] <= analysis_end].copy()
 analysis_df['admin_by_date'] = analysis_df['date_of_death'].apply(admin_by_date)
 if not (analysis_df['admin_by_date'] == analysis_df['administration']).all():
@@ -48,18 +39,33 @@ if not (analysis_df['admin_by_date'] == analysis_df['administration']).all():
     raise ValueError(f"Administration assignment mismatch for some rows based on date-of-death.\n{mismatches.head()}\nPlease ensure 'administration' is assigned by date of death.")
 
 results = []
-for admin, (start_fy, end_fy) in admin_fy_ranges.items():
+fy_month = 10
+fy_day = 1
+
+for admin, start_dt, end_dt in cutpoints:
     admin_deaths = analysis_df[analysis_df["administration"] == admin]
     death_count = len(admin_deaths)
     
-    admin_adp = adp_df[(adp_df["fiscal_year"] >= start_fy) & (adp_df["fiscal_year"] <= end_fy)]
-    person_years = admin_adp["adp"].sum()
-
-    # Add partial January 2026 person-time for Trump 2 (ICE+CBP Average Jan 2026 ADP = 69,919.33)
-    if admin == "Trump 2":
-        jan_2026_adp = 69919.333333
-        jan_2026_days = 29
-        person_years += jan_2026_adp * (jan_2026_days / 365)
+    fy_start = start_dt.year
+    fy_end = end_dt.year
+    
+    if start_dt >= datetime(start_dt.year, fy_month, fy_day):
+      fy_start += 1
+    
+    if end_dt >= datetime(end_dt.year, fy_month, fy_day):
+      fy_end += 1
+      
+    person_years = 0
+    n_days = 0
+  
+    for fy_year in range(fy_start,fy_end + 1):
+      if (adp_df.fiscal_year == (fy_year - 1)).any():
+        fy_range = (datetime(fy_year - 1, fy_month, fy_day), datetime(fy_year, fy_month, fy_day) + timedelta(days=-1))
+        max_start = max(fy_range[0], start_dt)
+        min_end = min(fy_range[1], end_dt)
+        n_overlap = max(0, (min_end - max_start).days + 1)
+        person_years += adp_df[adp_df["fiscal_year"] == fy_year].adp.mean() * n_overlap / 365
+        n_days += n_overlap
     
     rate = (death_count / person_years) * 100000
     ci_lower, ci_upper = calculate_poisson_ci(death_count, person_years)
@@ -68,10 +74,12 @@ for admin, (start_fy, end_fy) in admin_fy_ranges.items():
         "administration": admin,
         "deaths": death_count,
         "person_years": person_years,
+        "days": n_days,
         "rate_per_100k": rate,
         "ci_lower": ci_lower,
         "ci_upper": ci_upper
     })
+
 
 results_df = pd.DataFrame(results)
 results_df.to_csv(os.path.join(base_dir, "mortality_rates_by_administration.csv"), index=False)
