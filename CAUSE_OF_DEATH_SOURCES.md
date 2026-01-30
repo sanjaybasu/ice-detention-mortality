@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document explains where the cause of death information comes from for all 274 deaths in the dataset.
+This document explains where the cause of death information comes from for all 272 deaths in the dataset.
 
 ---
 
@@ -54,7 +54,7 @@ This document explains where the cause of death information comes from for all 2
 
 ---
 
-### Public Reporting Updates (CY2025 and January 2026; 25 deaths)
+### Public Reporting Updates (CY2025 and January 2026; 23 deaths)
 
 **Source:** Public reporting (Guardian timeline and January 2026 update list)
 
@@ -72,13 +72,13 @@ This document explains where the cause of death information comes from for all 2
 |:-------|:-------|:-------------|:-------------|:-------------|
 | FY2003-2017 | Master PDF | **Final** (adjudicated) | Moderate | 100% (all 172 have causes) |
 | FY2018-2025 | Individual PDFs | **Mixed** (some final, some preliminary) | High (when available) | 100% (all 77 have some information) |
-| CY2025 + Jan 2026 | Public reporting | **Mixed/uncertain** | Variable | 100% (all 25 have summarized causes) |
+| CY2025 + Jan 2026 | Public reporting | **Mixed/uncertain** | Variable | 100% (all 23 have summarized causes) |
 
 ---
 
 ## Key Findings
 
-### 1. All 274 Deaths Have Cause Information
+### 1. All 272 Deaths Have Cause Information
 
 Every death in the dataset includes cause of death information, though the level of detail varies.
 
@@ -90,7 +90,7 @@ The ICE master PDF explicitly labels causes as "FINAL CAUSE OF DEATH," indicatin
 
 ### 4. Public Reporting Updates Fill Recent Gaps
 
-Public reporting contributes 25 additional deaths (CY2025 and January 2026) with summarized cause-of-death details and linked sources until official ICE reports are released.
+Public reporting contributes 23 additional deaths (CY2025 and January 2026) with summarized cause-of-death details and linked sources until official ICE reports are released.
 
 Individual death reports include:
 - **Final causes:** Officially adjudicated by medical examiners
@@ -112,11 +112,11 @@ Individual death reports include:
 1. Download the master PDF: https://www.ice.gov/doclib/foia/reports/detaineedeaths-2003-2017.pdf
 2. Open the PDF and locate the death record
 3. Check the "FINAL CAUSE OF DEATH" column
-4. Compare with the cause listed in `all_274_deaths_detailed.csv`
+4. Compare with the cause listed in `all_272_deaths_detailed.csv`
 
 ### To Verify FY2018-2025 Causes
 
-1. Open `all_274_deaths_detailed.csv`
+1. Open `all_272_deaths_detailed.csv`
 2. Find the death of interest
 3. Copy the URL from the "PDF URL" column
 4. Open the PDF in a browser
@@ -167,9 +167,9 @@ When categorizing causes (e.g., "cardiovascular," "suicide"), review the actual 
 
 ## Data Files
 
-**Primary Data:** `all_274_deaths_detailed.csv`
+**Primary Data:** `all_272_deaths_detailed.csv`
 - Column: "Cause_of_Death"
-- All 274 deaths included
+- All 272 deaths included
 - Source PDFs listed in "PDF_URL" column
 
 **Source PDFs:**
@@ -190,6 +190,6 @@ All causes are verifiable by accessing the source PDFs listed in the dataset. Me
 ---
 
 **Last Updated:** November 15, 2025
-**Total Deaths:** 274
-**Causes Available:** 274 (100%)
+**Total Deaths:** 272
+**Causes Available:** 272 (100%)
 **Final Adjudicated:** 172 (FY2003-2017) + unknown number from FY2018-2025

@@ -1,16 +1,16 @@
 # ICE Detention Mortality Analysis: Complete Package (FY2004–Jan 2026)
 
-**All 274 Deaths with Complete Details**
+**All 272 Deaths with Complete Details**
 
-This package contains comprehensive analysis of all 274 in-custody deaths in U.S. Immigration and Customs Enforcement (ICE) detention from fiscal year 2004 through January 29, 2026, with complete cause of death information for every death.
+This package contains comprehensive analysis of all 272 in-custody deaths in U.S. Immigration and Customs Enforcement (ICE) detention from fiscal year 2004 through January 19, 2026, with complete cause of death information for every death.
 
 ---
 
 ## What's New in This Version
 
-✓ **All 274 deaths cataloged (FY2004–Jan 2026)** from official ICE sources and public reporting updates
+✓ **All 272 deaths cataloged (FY2004–Jan 2026)** from official ICE sources and public reporting updates
 ✓ **Cause of death for every death** (verbatim from ICE PDFs; preliminary vs. final noted in source docs)
-✓ **Facility name and type** for all deaths; age and facility location fully populated for all 274 deaths (FY2003–2017 and FY2018–2025, with public reporting updates for CY2025 and January 2026)
+✓ **Facility name and type** for all deaths; age and facility location fully populated for all 272 deaths (FY2003–2017 and FY2018–2025, with public reporting updates for CY2025 and January 2026)
 ✓ **Source PDFs** downloaded to `death_report_pdfs/` for offline verification
 ✓ **Medical review summary** - Comprehensive clinical analysis (with noted data gaps)
 
@@ -26,8 +26,8 @@ This package contains comprehensive analysis of all 274 in-custody deaths in U.S
 - Facility-specific patterns
 - Recommendations for further review
 
-**Primary data file:** `data/all_274_deaths_detailed.csv`
-- All 274 deaths with complete details
+**Primary data file:** `data/all_272_deaths_detailed.csv`
+- All 272 deaths with complete details
 - Includes PDF URLs for source verification
 
 ### For Researchers
@@ -58,10 +58,10 @@ This package contains comprehensive analysis of all 274 in-custody deaths in U.S
 
 ### 2. Complete Data Files (`data/`)
 
-**NEW: All 274 Deaths with Complete Details**
+**NEW: All 272 Deaths with Complete Details**
 
-- **all_274_deaths_detailed.csv** - **PRIMARY DATA FILE**
-  - All 274 deaths (FY2004–Jan 2026)
+- **all_272_deaths_detailed.csv** - **PRIMARY DATA FILE**
+  - All 272 deaths (FY2004–Jan 2026)
   - Columns: Name, Sex, Age, Country, Date of Death, **Cause of Death**, Facility Name, Facility Location, Facility Type, PDF URL, Period
   - **Every death includes cause of death information**
   - **Every death includes source PDF URL for verification**
@@ -69,7 +69,7 @@ This package contains comprehensive analysis of all 274 in-custody deaths in U.S
 **Supporting Data Files:**
 
 - **complete_death_records.csv** - Basic death records (name, date, fiscal year, administration)
-- **detailed_death_data.csv** - Detailed data for FY2018–2026 (102 deaths)
+- **detailed_death_data.csv** - Detailed data for FY2018–2026 (100 deaths)
 - **average_daily_population.csv** - ADP data by fiscal year
 - **mortality_rates_by_administration.csv** - Calculated mortality rates
 
@@ -99,26 +99,26 @@ Complete Python scripts to reproduce all analyses:
 
 ## Key Findings
 
-### All 274 Deaths (FY2004–Jan 2026)
+### All 272 Deaths (FY2004–Jan 2026)
 
 **Demographics:**
-- 250 male (91.2%), 24 female (8.8%)
+- 249 male (91.5%), 23 female (8.5%)
 - 55 deaths in IGSA facilities (20.1%)
 - 43 deaths in contract facilities (15.7%)
 
-**Mortality Rates by Administration (through Jan 29, 2026; partial January ADP):**
-- Bush (2001-2009): 79.17 per 100k (99 deaths)
-- Obama (2009-2017): 24.99 per 100k (67 deaths)
-- Trump 1 (2017-2021): 26.54 per 100k (42 deaths)
-- Biden (2021-2025): 23.35 per 100k (26 deaths)
-- Trump 2 (2025–Jan 29, 2026): 70.57 per 100k (40 deaths; January 2026 uses ICE‑reported ADP 69,919 as a partial‑month denominator)
+**Mortality Rates by Administration (through Jan 19, 2026; FY-weighted ADP):**
+- Bush (2001-2009): 73.35 per 100k (99 deaths)
+- Obama (2009-2017): 24.81 per 100k (67 deaths)
+- Trump 1 (2017-2021): 27.48 per 100k (42 deaths)
+- Biden (2021-2025): 21.66 per 100k (26 deaths)
+- Trump 2 (2025–Jan 19, 2026): 70.46 per 100k (38 deaths; FY-weighted ADP using ICE FY2025/FY2026 means)
 
-**Cause of Death (FY2018–2026, n=102):**
-- Cardiovascular: 20 deaths (19.6%)
-- Infectious disease: 23 deaths (22.5%)
-- Suicide: 16 deaths (15.7%)
-- Neurologic: 7 deaths (6.9%)
-- Other/undetermined: 36 deaths (35.3%)
+**Cause of Death (FY2018–2026, n=100):**
+- Cardiovascular: 20 deaths (20.0%)
+- Infectious disease: 23 deaths (23.0%)
+- Suicide: 16 deaths (16.0%)
+- Neurologic: 7 deaths (7.0%)
+- Other/undetermined: 34 deaths (34.0%)
 
 ---
 
@@ -126,15 +126,15 @@ Complete Python scripts to reproduce all analyses:
 
 ### Complete Cause of Death Data
 
-**All 274 deaths have cause of death information** extracted from official ICE reports and public reporting updates:
+**All 272 deaths have cause of death information** extracted from official ICE reports and public reporting updates:
 
 - **FY2003-2017 (172 deaths):** Cause listed in ICE master PDF
 - **FY2018-2025 (77 deaths):** Detailed cause in individual death reports
-- **CY2025 + Jan 2026 (25 deaths):** Cause summarized from public reporting with linked sources
+- **CY2025 + Jan 2026 (23 deaths):** Cause summarized from public reporting with linked sources
 
 ### How to Review Individual Deaths
 
-1. Open `data/all_274_deaths_detailed.csv`
+1. Open `data/all_272_deaths_detailed.csv`
 2. Find the death of interest
 3. Click the URL in the `PDF_URL` column to access the official ICE death report
 4. Review the complete medical information
@@ -151,7 +151,7 @@ See `medical_review/COMPLETE_MEDICAL_REVIEW.md` for:
 
 ## Data Quality & Verification
 
-✓ **Complete roster:** All 274 deaths included (172 from 2003-2017 FOIA PDF, 77 individual PDFs for 2018-2025, 25 public reporting updates for CY2025 and January 2026)
+✓ **Complete roster:** All 272 deaths included (172 from 2003-2017 FOIA PDF, 77 individual PDFs for 2018-2025, 23 public reporting updates for CY2025 and January 2026)
 ✓ **Cause data present:** Each death retains the ICE-reported cause (preliminary or final as provided)
 ✓ **Verifiable:** Every death now has a downloaded source PDF in `death_report_pdfs/`
 ✓ **Reproducible code:** Scripts regenerate rates and figures; see `replication_code/`
@@ -159,11 +159,11 @@ See `medical_review/COMPLETE_MEDICAL_REVIEW.md` for:
 ### To Verify the Data
 
 1. Download ICE 2003-2017 PDF: https://www.ice.gov/doclib/foia/reports/detaineedeaths-2003-2017.pdf
-2. Compare with `all_274_deaths_detailed.csv` (172 deaths)
+2. Compare with `all_272_deaths_detailed.csv` (172 deaths)
 3. Visit ICE death reporting page: https://www.ice.gov/detain/detainee-death-reporting
-4. Compare with `all_274_deaths_detailed.csv` (77 individual FY2018–FY2025 reports)
-5. Cross-check public reporting updates (CY2025 and January 2026) using the linked sources in `all_274_deaths_detailed.csv`
-6. Total: 274 deaths ✓
+4. Compare with `all_272_deaths_detailed.csv` (77 individual FY2018–FY2025 reports)
+5. Cross-check public reporting updates (CY2025 and January 2026) using the linked sources in `all_272_deaths_detailed.csv`
+6. Total: 272 deaths ✓
 
 ---
 
@@ -198,7 +198,7 @@ For questions about the data or methodology, refer to:
 
 ---
 
-**Package Version:** 2.2 (Complete - All 274 Deaths)
-**Last Updated:** January 2026 (age and facility location fully populated for all 274 deaths via FOIA PDF extraction, ICE individual reports, and public reporting updates)
-**Total Deaths:** 274 (FY2004–Jan 2026)
+**Package Version:** 2.3 (Complete - All 272 Deaths)
+**Last Updated:** January 2026 (age and facility location fully populated for all 272 deaths via FOIA PDF extraction, ICE individual reports, and public reporting updates)
+**Total Deaths:** 272 (FY2004–Jan 2026)
 **Complete Data:** 100%

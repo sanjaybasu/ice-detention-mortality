@@ -122,7 +122,7 @@ The cause of death information comes from:
 
 ### To Verify a Specific Death
 
-1. Open `../data/all_274_deaths_detailed.csv`
+1. Open `../data/all_272_deaths_detailed.csv`
 2. Find the death of interest
 3. Note the "Cause_of_Death" listed
 4. Click the "PDF_URL" to open the source document
