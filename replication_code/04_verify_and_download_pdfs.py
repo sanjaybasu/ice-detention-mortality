@@ -15,7 +15,7 @@ os.makedirs(OUT_DIR, exist_ok=True)
 os.makedirs(PDF_DIR, exist_ok=True)
 os.makedirs(SRC_DIR, exist_ok=True)
 
-details_path = os.path.join(DATA, 'all_274_deaths_detailed.csv')
+details_path = os.path.join(DATA, 'all_272_deaths_detailed.csv')
 df = pd.read_csv(details_path)
 
 # Verify individual FY2018-2025 PDFs

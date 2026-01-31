@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
+import os
 import pandas as pd
 
-deaths = pd.read_csv('../data/complete_death_records.csv')
+BASE_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
+deaths = pd.read_csv(os.path.join(BASE_DIR, "complete_death_records.csv"))
 
 def assign_fiscal_year(date_str):
     date = pd.to_datetime(date_str)

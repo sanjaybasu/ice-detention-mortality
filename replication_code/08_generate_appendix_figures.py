@@ -8,7 +8,7 @@ BASE_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "manuscript")
 os.makedirs(OUT_DIR, exist_ok=True)
 
-all_path = os.path.join(BASE_DIR, "all_274_deaths_detailed.csv")
+all_path = os.path.join(BASE_DIR, "all_272_deaths_detailed.csv")
 detailed_path = os.path.join(BASE_DIR, "detailed_death_data.csv")
 
 all_df = pd.read_csv(all_path)

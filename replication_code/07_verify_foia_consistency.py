@@ -9,7 +9,7 @@ DATA = os.path.join(BASE, '..', 'data')
 OUT = os.path.join(BASE, '..', 'verification')
 os.makedirs(OUT, exist_ok=True)
 
-all_df = pd.read_csv(os.path.join(DATA, 'all_274_deaths_detailed.csv'))
+all_df = pd.read_csv(os.path.join(DATA, 'all_272_deaths_detailed.csv'))
 foia_df = pd.read_csv(os.path.join(DATA, '_extracted_foia_2003_2017.csv'))
 
 # Subset to FOIA-era in our main dataset

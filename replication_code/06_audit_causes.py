@@ -11,7 +11,7 @@ DATA = os.path.join(BASE, '..', 'data')
 OUTDIR = os.path.join(BASE, '..', 'verification')
 os.makedirs(OUTDIR, exist_ok=True)
 
-df = pd.read_csv(os.path.join(DATA, 'all_274_deaths_detailed.csv'))
+df = pd.read_csv(os.path.join(DATA, 'all_272_deaths_detailed.csv'))
 recent = df[df['Period'].astype(str).str.contains('FY2018-2025')].copy()
 
 session = requests.Session()

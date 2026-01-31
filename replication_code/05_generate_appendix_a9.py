@@ -6,7 +6,7 @@ BASE = os.path.dirname(__file__)
 DATA = os.path.join(BASE, '..', 'data')
 OUT = os.path.join(BASE, '..', 'manuscript', 'APPENDIX_A9_INDEX.md')
 
-df = pd.read_csv(os.path.join(DATA, 'all_274_deaths_detailed.csv'))
+df = pd.read_csv(os.path.join(DATA, 'all_272_deaths_detailed.csv'))
 
 cols = [
     'Name','Sex','Age','Country','Date_of_Death',
